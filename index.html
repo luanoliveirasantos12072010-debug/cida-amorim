@@ -69,9 +69,10 @@ h2{font-size:clamp(40px,5.2vw,74px)}
 @media(max-width:480px){.top .btn span{display:none}.top .btn{padding:12px}}
 
 /* ===== Hero ===== */
-.hero{position:relative;min-height:100svh;padding:130px 0 70px;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;min-height:100svh;padding:130px 0 70px;display:flex;align-items:center;overflow:hidden;background:radial-gradient(70% 60% at 82% 45%,rgba(79,143,128,.30),transparent 70%),radial-gradient(45% 40% at 95% 95%,rgba(232,133,122,.22),transparent 70%),radial-gradient(40% 40% at 5% 10%,rgba(243,197,107,.18),transparent 70%),linear-gradient(160deg,#e6f2ee 0%,#f3f8f5 45%,#faf8f3 100%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(transparent,var(--cream));pointer-events:none}
 .hero .waves{position:absolute;right:-12%;top:50%;width:min(1100px,110vw);aspect-ratio:1;transform:translateY(-50%);pointer-events:none;z-index:-1}
-.hero .waves span{position:absolute;inset:0;margin:auto;border-radius:50%;border:1px solid var(--mintD);animation:wv 9s linear infinite}
+.hero .waves span{position:absolute;inset:0;margin:auto;border-radius:50%;border:1.5px solid rgba(79,143,128,.28);animation:wv 9s linear infinite}
 .hero .waves span:nth-child(2){animation-delay:-3s}.hero .waves span:nth-child(3){animation-delay:-6s}
 @keyframes wv{0%{width:20%;height:20%;opacity:1}100%{width:100%;height:100%;opacity:0}}
 .hg{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,80px);align-items:center}
@@ -88,7 +89,7 @@ h2{font-size:clamp(40px,5.2vw,74px)}
 .hero .chips span i{width:8px;height:8px;border-radius:50%;background:var(--teal)}
 .hv{position:relative;aspect-ratio:4/4.9;perspective:1100px}
 .hv .blob{position:absolute;inset:4% 0 0 6%;border-radius:46% 54% 42% 58%/52% 44% 56% 48%;overflow:hidden;box-shadow:0 50px 90px -50px rgba(31,61,56,.7);animation:mo 14s ease-in-out infinite;transform:rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));transition:transform .7s var(--ease)}
-.hv .blob img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.1);transition:transform 2.2s var(--ease)}
+.hv .blob img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transform:scale(1.1);transition:transform 2.2s var(--ease)}
 .ready .hv .blob img{transform:none}
 @keyframes mo{50%{border-radius:56% 44% 52% 48%/44% 56% 46% 54%}}
 .hv .badge{position:absolute;z-index:2;background:var(--white);border-radius:22px;padding:14px 18px;box-shadow:0 30px 50px -30px rgba(31,61,56,.6);display:flex;align-items:center;gap:12px;text-decoration:none;translate:var(--cx,0px) var(--cy,0px);transition:translate .7s var(--ease)}
@@ -295,7 +296,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--teal)}
       <div class="chips"><span><i></i>Terapia TRG</span><span><i style="background:var(--coral)"></i>Presencial</span><span><i style="background:var(--sun)"></i>Online</span></div>
     </div>
     <div class="hv" id="hv">
-      <div class="blob"><img src="img/perfil-verde.jpg" alt="Cida Amorim, psicoterapeuta, sorrindo no consultório" fetchpriority="high"></div>
+      <div class="blob"><img src="img/hero.jpg" alt="Cida Amorim, psicoterapeuta, com jaleco de terapeuta TRG" fetchpriority="high"></div>
       <a class="badge b1" href="https://www.google.com/maps/search/?api=1&query=Cida+Amorim+Psicoterapeuta+Serra+Talhada" target="_blank" rel="noopener"><div><span class="st">★★★★★</span><b>5,0</b><small>avaliações no Google</small></div></a>
       <div class="badge b2"><span class="tg"><i>trg</i></span><div><b style="font-size:17px">Especialista TRG</b><small>Reprocessamento Generativo</small></div></div>
     </div>
